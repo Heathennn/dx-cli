@@ -1,0 +1,25 @@
+{
+  "name": "issfe-cli",
+  "version": "1.0.0",
+  "description": "isoftstone-frontend-cli",
+  "main": "index.js",
+  "type": "commonjs",
+  "bin": {
+    "issfe-cli": "./index.js",
+    "issfe": "./index.js"
+  },
+  "scripts": {
+    "sync:local": "node ./build/syncLocal.js",
+    "release": "node ./build/beforeGitPush.js && git add . && git commit -m\"优化\" && git push"
+  },
+  "keywords": [],
+  "author": "Gnak",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.2",
+    "chalk": "^4.0.0",
+    "commander": "^9.4.1",
+    "inquirer": "^8.2.5",
+    "shelljs": "^0.8.5"
+  }
+}

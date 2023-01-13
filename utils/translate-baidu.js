@@ -1,0 +1,9 @@
+var appid = '20230106001521209';
+var key = 'D_IZwS37CEgWmImfFy1H';
+var salt = (new Date).getTime();
+var query = 'apple';
+// 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
+var from = 'en';
+var to = 'zh';
+var str1 = appid + query + salt +key;
+var sign = MD5(str1);

@@ -1,0 +1,72 @@
+{
+    "desc": "前端项目相关命令",
+    "syncRemoteUrlPrefix": "git remote set-url origin https://$account:$password@gykjdmzgit.dccnet.com.cn:8088/tms/",
+    "run": [
+        {
+            "value": "build",
+            "name": "打包"
+        },
+        {
+            "value": "sync",
+            "name": "同步"
+        }
+    ],
+    "build": [
+        {
+            "name": "打包i18n",
+            "script": "npm run i18n -- --packPage="
+        },
+        {
+            "name": "打包代码",
+            "script": "npm run build:quick -- --packPage="
+        }
+    ],
+    "sync": [
+        {
+            "name": "设置远程地址[front-web]",
+            "script": "git remote set-url origin https://$account:$password@gykjdmzgit.dccnet.com.cn:8088/tms/front-web.git",
+            "auth": true
+        },
+        {
+            "name": "强制拉取远程[front-web]",
+            "script": "git pull origin dev --allow-unrelated-histories"
+        },
+        {
+            "name": "尝试处理冲突[src/pages/index][以web为准]",
+            "script": "git checkout --their src/pages/index"
+        },
+        {
+            "name": "尝试处理冲突[src/pages/demo][以web为准]",
+            "script": "git checkout --their src/pages/demo"
+        },
+        {
+            "name": "尝试处理冲突[src/pages/temp][以web为准]",
+            "script": "git checkout --their src/pages/temp"
+        },
+        {
+            "name": "尝试处理冲突[src/common][以web为准]",
+            "script": "git checkout --their src/common"
+        },
+        {
+            "name": "尝试处理冲突[src/style][以web为准]",
+            "script": "git checkout --their src/style"
+        },
+        {
+            "name": "尝试处理冲突[build/devtools][以web为准]",
+            "script": "git checkout --their build/devtools"
+        },
+        {
+            "name": "尝试处理冲突文件[gulpfile.prod.js gulpfile.dev.js][以web为准]",
+            "script": "git checkout --their gulpfile.prod.js gulpfile.dev.js"
+        },
+
+        {
+            "name": "尝试处理冲突文件[.gitignore package.json pom.xml vue.config.js][以本地为准]",
+            "script": "git checkout --ours .gitignore package.json pom.xml vue.config.js"
+        },
+        {
+            "name": "添加到暂存区",
+            "script": "git add ."
+        }
+    ]
+}
