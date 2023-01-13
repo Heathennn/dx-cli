@@ -1,6 +1,5 @@
 const shell = require("shelljs");
 const { log } = require("../utils/common")
-console.log(process.argv)
 let msgIndex = process.argv.indexOf('msg');
 if (msgIndex > -1) {
     let msg = process.argv[msgIndex+1]
