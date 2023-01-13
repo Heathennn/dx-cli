@@ -1,3 +1,4 @@
+// 提交前用默认配置覆盖config.json
 const chalk = require("chalk")
 const localConfig = require("../config.default.json");
 const { writeFileContent, log } = require('../utils/common')

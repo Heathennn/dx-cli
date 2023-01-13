@@ -50,11 +50,21 @@ ps: 默认翻译zh-CN下的第一个文件
 > 每秒最多10次请求 (经过次数10次请求会有个别请求不返回翻译结果, 目前设置为每秒7次)
 
 [百度翻译注册地址](https://fanyi-api.baidu.com/manage/developer)
-注册后创建自己的应用并开通文本翻译功能, 在项目根目录下config.json里translate.account替换成自己的appid和key即可, 后续会做成用命令配置的形式使用(配置完只需要保存, 不需要重新link等操作)
+
+注册后 
+1. 创建自己的应用 会生成appId和key
+2. 开通文本翻译功能 开通后才能正常翻译
+
+### 配置百度翻译appid和key
+```bash
+issfe set translate account.appId 你的appId
+issfe set translate account.key 你的key
+```
+
 ### 重新link
 > 修改文件名/文件目录等操作时需要此操作
 
-在issfe-cli目录下执行
+在dx-cli目录下执行
 ```bash
 npm unlink dx
 npm link --force
@@ -62,7 +72,7 @@ npm link --force
 或
 前往C:\Users\issuser\AppData\Roaming\npm中手动把自己的命令删除
 
-### issfe运行常见报错解决
+### dx-cli运行常见报错解决
 
 - 环境: windows10
 

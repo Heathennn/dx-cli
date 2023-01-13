@@ -1,3 +1,4 @@
+// 用本地配置覆盖config.json
 const chalk = require("chalk")
 const localConfig = require("../config.local.json");
 const { writeFileContent, log } = require('../utils/common')
