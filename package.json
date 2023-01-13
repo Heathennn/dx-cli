@@ -10,7 +10,7 @@
   },
   "scripts": {
     "sync:local": "node ./build/syncLocal.js",
-    "release": "node ./build/beforeGitPush.js && git add . && git commit -m \"优化\" && git push"
+    "release": "node ./build/beforeGitPush.js && node ./build/release.js"
   },
   "keywords": [],
   "author": "Gnak",
