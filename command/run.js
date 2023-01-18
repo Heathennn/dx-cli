@@ -81,8 +81,8 @@ const runCmd = {
  * @param content
  */
 function parseAuthContent(accountConfig, content) {
-    let result = content.replaceAll('$account', accountConfig.account)
-    result = result.replaceAll('$password', accountConfig.password);
+    let result = content.replace(new RegExp('\$account', 'g'), accountConfig.account)
+    result = result.replace(new RegExp('\$password', 'g'), accountConfig.password);
     return result
 }
 

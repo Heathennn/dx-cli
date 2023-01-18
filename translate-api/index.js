@@ -5,12 +5,6 @@ const axios = require('axios')
 const appid = translateConfig.account.appId; // appid
 const key = translateConfig.account.key; // 密钥
 let salt = (new Date).getTime();
-var query = '';
-// 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
-let from = 'zh';
-let to = 'en';
-let str1 = appid + query + salt +key;
-let sign = MD5(str1);
 
 function genSign(options) {
   let str1 = appid + options.query + salt + key;
